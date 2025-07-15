@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Menu</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="app.js" defer></script>
 </head>
 <body>
   <div class="app-window">
-    <div class="window-header">Nani's Timer &lt;3</div>
-    <button class="back-btn" onclick="goBack()">↩</button>
-    <div class="grid">
-      <div onclick="selectPreset('Drama', 5)">
-        <img src="assets/drama.png" alt="Drama">
-        <p>Drama</p>
+    <div class="window-header">
+      <div class="window-controls">
+        <span class="win-btn"></span>
+        <span class="win-btn"></span>
+        <span class="win-btn"></span>
       </div>
-      <div onclick="selectPreset('Game', 10)">
-        <img src="assets/game.png" alt="Game">
-        <p>Game</p>
-      </div>
-      <div onclick="selectPreset('Water Break', 3)">
-        <img src="assets/water-break.png" alt="Water Break">
-        <p>Water Break</p>
-      </div>
-      <div onclick="location.href='custom.html'">
-        <img src="assets/custom.png" alt="Custom">
-        <p>Custom</p>
+      <div class="window-title">Nani's Timer <3</div>
+    </div>
+    <div class="window-body">
+      <button class="back-button" onclick="goBack()">Back</button>
+      <h2>What are you doing today?</h2>
+      <div class="options-grid">
+        <div class="option" onclick="selectPreset('Drama', 10)">
+          <img src="assets/drama.png" alt="Drama" />
+          <p>Drama</p>
+        </div>
+        <div class="option" onclick="selectPreset('Game', 15)">
+          <img src="assets/game.png" alt="Game" />
+          <p>Game</p>
+        </div>
+        <div class="option" onclick="selectPreset('Water Break', 5)">
+          <img src="assets/water-break.png" alt="Water Break" />
+          <p>Water Break</p>
+        </div>
+        <div class="option" onclick="window.location.href='custom.html'">
+          <img src="assets/custom.png" alt="Custom" />
+          <p>Custom</p>
+        </div>
       </div>
     </div>
   </div>

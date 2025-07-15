@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Time's Up</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="app-window">
-    <div class="window-header">Nani's Timer &lt;3</div>
-    <h2>⏰ Time’s Up!</h2>
-    <div class="buttons">
-      <button onclick="location.href='timer.html'">Snooze</button>
-      <button onclick="location.href='index.html'">Close</button>
+    <div class="window-header">
+      <div class="window-controls">
+        <span class="win-btn"></span>
+        <span class="win-btn"></span>
+        <span class="win-btn"></span>
+      </div>
+      <div class="window-title">Nani's Timer <3</div>
+    </div>
+    <div class="window-body center">
+      <h2>Time's Up!</h2>
+      <img src="assets/timesup.gif" alt="Time's Up" />
+      <button onclick="window.location.href='menu.html'">Back to Menu</button>
     </div>
   </div>
 </body>

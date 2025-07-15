@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Custom Timer</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="app.js" defer></script>
 </head>
 <body>
   <div class="app-window">
-    <div class="window-header">Nani's Timer &lt;3</div>
-    <button class="back-btn" onclick="goBack()">↩</button>
-    <h2>Set Custom Timer</h2>
-    <div class="custom-inputs">
-      <input id="custom-minutes" type="number" placeholder="Min" min="0">
-      <input id="custom-seconds" type="number" placeholder="Sec" min="0">
+    <div class="window-header">
+      <div class="window-controls">
+        <span class="win-btn"></span>
+        <span class="win-btn"></span>
+        <span class="win-btn"></span>
+      </div>
+      <div class="window-title">Nani's Timer <3</div>
     </div>
-    <button onclick="saveCustomTime()">Start Custom Timer</button>
+    <div class="window-body center">
+      <button class="back-button" onclick="goBack()">Back</button>
+      <h2>Set Custom Time</h2>
+      <input id="custom-minutes" type="number" placeholder="Minutes" />
+      <input id="custom-seconds" type="number" placeholder="Seconds" />
+      <button onclick="saveCustomTime()">Save & Start</button>
+    </div>
   </div>
 </body>
 </html>
