@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nani's Timer &lt;3</title>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Timer</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="app.js" defer></script>
 </head>
 <body>
   <div class="app-window">
-    <button class="back-btn" onclick="goBack()">Back</button>
-    <h2>Timer</h2>
-    <img src="assets/timer.gif" alt="Timer" />
-    <div id="countdown">00:00</div>
-    <button onclick="startCountdownFromStorage()">Start</button>
-    <button onclick="stopTimer()">Stop</button>
+    <div class="window-header">Nani's Timer &lt;3</div>
+    <button class="back-btn" onclick="goBack()">↩</button>
+    <h2 id="preset-name"></h2>
+    <div id="countdown" class="countdown">00:00</div>
+    <div class="controls">
+      <button onclick="startTimer()">Start</button>
+      <button onclick="stopTimer()">Stop / Resume</button>
+    </div>
   </div>
 </body>
 </html>
+

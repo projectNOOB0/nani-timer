@@ -1,120 +1,130 @@
-/* General reset */
+/* Base reset */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-body {
-  font-family: 'Courier New', Courier, monospace;
-  background: url('assets/as.jpg') no-repeat center center fixed;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-/* App window container */
+/* App container */
 .app-window {
-  background: white;
-  width: 90%;
-  max-width: 500px;
-  min-height: 600px;
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  text-align: center;
+  width: 360px;
+  margin: 30px auto;
+  padding: 20px;
+  background: url('assets/as.jpg') no-repeat center center;
+  background-size: cover;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1.5rem;
+  text-align: center;
 }
 
-/* Typography */
-h1, h2 {
+/* Header */
+.window-header {
+  font-size: 1.5rem;
   font-weight: bold;
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 20px;
 }
 
-/* Back button inside the layout */
+/* Back button */
 .back-btn {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
-  padding: 0.5rem 1rem;
+  left: 10px;
+  top: 10px;
+  background-color: #fff;
   border: none;
-  background-color: #ffe4b5;
-  border-radius: 10px;
-  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
 /* Buttons */
 button {
-  padding: 0.75rem 1.5rem;
-  font-weight: bold;
-  background-color: #ffe4b5;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 10px 5px;
   border: none;
   border-radius: 12px;
+  background-color: #f06363;
+  color: white;
   cursor: pointer;
-  margin: 0.5rem;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s;
 }
-
 button:hover {
-  background-color: #fcd89a;
+  background-color: #d94b4b;
 }
 
-/* Timer display */
-#countdown {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-top: 1rem;
-}
-
-/* Grid for menu items */
+/* Grid for menu options */
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
 }
-
 .grid div {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 14px;
+  padding: 10px;
   text-align: center;
   cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
 }
-
+.grid div:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.95);
+}
 .grid img {
   width: 60px;
   height: 60px;
-  object-fit: contain;
-  margin-bottom: 0.5rem;
+}
+.grid p {
+  margin-top: 8px;
+  font-weight: bold;
 }
 
-/* Custom input fields */
+/* Countdown display */
+.countdown {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  margin: 20px 0;
+}
+
+/* Timer controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Custom time inputs */
 .custom-inputs {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin: 1rem 0;
+  gap: 10px;
+  margin: 15px 0;
 }
-
 .custom-inputs input {
   width: 80px;
-  padding: 0.5rem;
+  padding: 10px;
   font-size: 1rem;
-  text-align: center;
-  border: 2px solid #ddd;
+  border: 2px solid #ccc;
   border-radius: 10px;
+  text-align: center;
 }
 
-/* Times up buttons */
+/* Time's up screen buttons */
 .buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+  margin-top: 30px;
+}
+.buttons button {
+  background-color: #3e8ed0;
+}
+.buttons button:hover {
+  background-color: #2f78b8;
 }

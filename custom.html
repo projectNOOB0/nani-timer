@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nani's Timer &lt;3</title>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Custom Timer</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="app.js" defer></script>
 </head>
 <body>
   <div class="app-window">
-    <button class="back-btn" onclick="goBack()">Back</button>
-    <h2>Set Your Custom Timer</h2>
+    <div class="window-header">Nani's Timer &lt;3</div>
+    <button class="back-btn" onclick="goBack()">↩</button>
+    <h2>Set Custom Timer</h2>
     <div class="custom-inputs">
-      <input type="number" id="custom-minutes" placeholder="Min" min="0" />
-      <input type="number" id="custom-seconds" placeholder="Sec" min="0" />
+      <input id="custom-minutes" type="number" placeholder="Min" min="0">
+      <input id="custom-seconds" type="number" placeholder="Sec" min="0">
     </div>
-    <button onclick="saveCustomTime()">Set Timer</button>
+    <button onclick="saveCustomTime()">Start Custom Timer</button>
   </div>
 </body>
 </html>
-l>
