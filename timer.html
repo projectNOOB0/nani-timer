@@ -1,9 +1,10 @@
+<!-- timer.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Timer</title>
+  <title>Timer Running</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="app.js" defer></script>
 </head>
@@ -19,11 +20,14 @@
     </div>
     <div class="window-body center">
       <button class="back-button" onclick="goBack()">Back</button>
-      <h2 id="countdown">00:00</h2>
-      <button onclick="startTimer()">Start</button>
-      <button onclick="stopTimer()">Stop</button>
+      <h2>Timer Running</h2>
+      <div id="countdown">00:00</div>
+      <img src="assets/timer.gif" alt="Timer Running" />
+      <div class="timer-controls">
+        <button onclick="startTimer()">Start</button>
+        <button onclick="stopTimer()">Stop</button>
+      </div>
     </div>
   </div>
 </body>
 </html>
-
