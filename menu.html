@@ -1,24 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Nani's Timer - Menu</title>
+  <title>Menu - Nani's Timer</title>
 </head>
 <body>
-  <h1>Select a Timer</h1>
+  <h2>Select a Timer</h2>
+  <button onclick="selectPreset('Drama', 90)">Drama (1h 30min)</button><br>
+  <button onclick="selectPreset('Game', 60)">Game (1h)</button><br>
+  <button onclick="selectPreset('Water Break', 30)">Water Break (30min)</button><br><br>
 
-  <!-- Preset Options -->
-  <button onclick="startPreset(90)">Drama (1h 30min)</button><br>
-  <button onclick="startPreset(60)">Game (1h)</button><br>
-  <button onclick="startPreset(30)">Water Break (30min)</button><br>
+  <a href="custom.html"><button>Custom Timer</button></a><br><br>
 
-  <!-- Custom Option -->
-  <h2>Custom Timer</h2>
-  <input type="number" id="custom-minutes" placeholder="Minutes">
-  <input type="number" id="custom-seconds" placeholder="Seconds">
-  <button onclick="startCustom()">Start Custom Timer</button>
-
-  <!-- Back Button -->
-  <button onclick="goBack()" style="margin-top: 20px;">⬅️ Back</button>
+  <button onclick="goBack()">⬅️ Back</button>
 
   <script src="app.js"></script>
 </body>
