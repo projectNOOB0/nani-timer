@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Timer Running</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nani's Timer &lt;3</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
 </head>
 <body>
   <div class="app-window">
-    <button onclick="goBack()" class="back-button">Back</button>
-
-<body class="background">
-  <div class="card center">
-    <img src="timer.gif" alt="Timer" class="timer-gif">
-    <h2 id="countdown">00:00</h2>
+    <button class="back-btn" onclick="goBack()">Back</button>
+    <h2>Timer</h2>
+    <img src="timer.gif" alt="Timer Running" />
+    <div id="countdown">00:00</div>
+    <button onclick="startCountdownFromStorage()">Start</button>
+    <button onclick="stopTimer()">Stop</button>
   </div>
-  <script src="app.js"></script>
 </body>
 </html>

@@ -1,34 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Nani's Timer - Menu</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nani's Timer &lt;3</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
 </head>
 <body>
   <div class="app-window">
-    <button class="back-button" onclick="goBack()">Back</button>
+    <button class="back-btn" onclick="goBack()">Back</button>
     <h2>What are you doing today?</h2>
-    
-    <div class="timer-options">
-      <div onclick="selectPreset('Drama', 90)">
-        <img src="Drama.png" alt="Drama">
+    <div class="grid">
+      <div onclick="selectPreset('Drama', 30)">
+        <img src="drama.png" alt="Drama" />
         <p>Drama</p>
       </div>
-      <div onclick="selectPreset('Game', 60)">
-        <img src="Game.png" alt="Game">
+      <div onclick="selectPreset('Game', 10)">
+        <img src="game.png" alt="Game" />
         <p>Game</p>
       </div>
-      <div onclick="selectPreset('Water Break', 30)">
-        <img src="Water Break.png" alt="Water Break">
+      <div onclick="selectPreset('Water Break', 5)">
+        <img src="water-break.png" alt="Water Break" />
         <p>Water Break</p>
       </div>
-      <div onclick="window.location.href='custom.html'">
-        <img src="Custom.png" alt="Custom">
+      <div onclick="location.href='custom.html'">
+        <img src="custom.png" alt="Custom" />
         <p>Custom</p>
       </div>
     </div>
   </div>
-
-  <script src="app.js"></script>
 </body>
 </html>

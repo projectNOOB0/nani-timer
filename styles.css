@@ -1,70 +1,120 @@
-body {
+/* General reset */
+* {
   margin: 0;
-  font-family: 'Courier New', monospace;
-  background: url('as.jpg') center center / cover no-repeat fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background: url("img/as.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* App window container */
 .app-window {
-  background: #fff;
-  width: 320px;
-  height: 500px;
+  background: white;
+  width: 90%;
+  max-width: 500px;
+  min-height: 600px;
+  padding: 2rem;
   border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-  padding: 20px;
-  box-sizing: border-box;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
-.back-button {
+/* Typography */
+h1, h2 {
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+/* Back button inside the layout */
+.back-btn {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  padding: 6px 14px;
-  border-radius: 10px;
-  background: #ffe6b3;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem 1rem;
   border: none;
+  background-color: #ffe4b5;
+  border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
 }
 
-h1, h2 {
-  font-size: 1.3rem;
-  margin-top: 60px;
-  text-align: center;
-}
-
+/* Buttons */
 button {
-  background: #ffe6b3;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  background-color: #ffe4b5;
   border: none;
-  padding: 10px 20px;
   border-radius: 12px;
   cursor: pointer;
-  margin: 10px 0;
-  font-weight: bold;
-  font-family: inherit;
+  margin: 0.5rem;
+  transition: background-color 0.2s ease;
 }
 
-.timer-options {
+button:hover {
+  background-color: #fcd89a;
+}
+
+/* Timer display */
+#countdown {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Grid for menu items */
+.grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-top: 20px;
+  gap: 1rem;
   justify-items: center;
-  text-align: center;
 }
 
-.timer-options img {
+.grid div {
+  text-align: center;
+  cursor: pointer;
+}
+
+.grid img {
   width: 60px;
   height: 60px;
   object-fit: contain;
-  display: block;
-  margin: auto;
+  margin-bottom: 0.5rem;
+}
+
+/* Custom input fields */
+.custom-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.custom-inputs input {
+  width: 80px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+
+/* Times up buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
