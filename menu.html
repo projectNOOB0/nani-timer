@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Menu - Nani's Timer</title>
+  <title>Choose Timer</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <h2>Select a Timer</h2>
-  <button onclick="selectPreset('Drama', 90)">Drama (1h 30min)</button><br>
-  <button onclick="selectPreset('Game', 60)">Game (1h)</button><br>
-  <button onclick="selectPreset('Water Break', 30)">Water Break (30min)</button><br><br>
-
-  <a href="custom.html"><button>Custom Timer</button></a><br><br>
-
-  <button onclick="goBack()">⬅️ Back</button>
-
+<body class="background">
+  <div class="card center">
+    <button class="back-btn" onclick="goBack()">Back</button>
+    <h2>What are you doing today?</h2>
+    <div class="grid">
+      <div class="option" onclick="selectPreset('Drama', 90)">
+        <img src="Drama.png" alt="Drama">
+        <p>Drama</p>
+      </div>
+      <div class="option" onclick="selectPreset('Game', 60)">
+        <img src="Game.png" alt="Game">
+        <p>Game</p>
+      </div>
+      <div class="option" onclick="selectPreset('Water Break', 30)">
+        <img src="Water Break.png" alt="Water Break">
+        <p>Water Break</p>
+      </div>
+      <div class="option" onclick="window.location.href='custom.html'">
+        <img src="Custom.png" alt="Custom">
+        <p>Custom</p>
+      </div>
+    </div>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
-

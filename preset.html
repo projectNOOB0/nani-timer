@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Start Preset - Nani's Timer</title>
+  <title>Preset Timer</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <h2 id="preset-name">Starting...</h2>
-  <div id="countdown">00:00</div>
-  <button onclick="startPresetTimer()">▶️ Start</button>
-  <button onclick="stopTimer()">⏹️ Stop</button>
-  <button onclick="goBack()">⬅️ Back</button>
-
+<body class="background">
+  <div class="card center">
+    <button class="back-btn" onclick="goBack()">Back</button>
+    <h2 id="preset-name">Timer</h2>
+    <img src="timer.gif" alt="Timer Running" class="timer-gif">
+    <div id="countdown">00:00</div>
+    <button onclick="startPresetTimer()">Start</button>
+    <button onclick="stopTimer()">Stop</button>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
