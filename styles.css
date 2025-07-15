@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Courier New', Courier, monospace;
-  background: url("img/as.jpg") no-repeat center center fixed;
+  background: url('as.jpg') no-repeat center center fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
