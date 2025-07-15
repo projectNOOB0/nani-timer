@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
   <title>Nani's Timer - Menu</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="manifest" href="manifest.json" />
 </head>
 <body>
-  <h1>Select Timer Type</h1>
+  <h1>Select a Timer</h1>
 
-  <button onclick="startPreset(90)">🎭 Drama (1hr 30min)</button>
-  <button onclick="startPreset(60)">🎮 Game (1hr)</button>
-  <button onclick="startPreset(30)">🚰 Water Break (30min)</button>
+  <!-- Preset Options -->
+  <button onclick="startPreset(90)">Drama (1h 30min)</button><br>
+  <button onclick="startPreset(60)">Game (1h)</button><br>
+  <button onclick="startPreset(30)">Water Break (30min)</button><br>
 
-  <div>
-    <h2>✍️ Custom Timer</h2>
-    <label>Minutes: <input type="number" id="custom-minutes" min="0" /></label>
-    <label>Seconds: <input type="number" id="custom-seconds" min="0" /></label>
-    <button onclick="startCustom()">Start Custom Timer</button>
-  </div>
-<button onclick="location.href='menu.html'">⬅️ Back to Menu</button>
+  <!-- Custom Option -->
+  <h2>Custom Timer</h2>
+  <input type="number" id="custom-minutes" placeholder="Minutes">
+  <input type="number" id="custom-seconds" placeholder="Seconds">
+  <button onclick="startCustom()">Start Custom Timer</button>
+
+  <!-- Back Button -->
+  <button onclick="goBack()" style="margin-top: 20px;">⬅️ Back</button>
 
   <script src="app.js"></script>
 </body>
 </html>
+
