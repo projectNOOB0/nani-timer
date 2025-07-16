@@ -7,11 +7,13 @@ let endTime;
 
 // 🌟 Preset selection
 function selectPreset(label, minutes) {
+  localStorage.removeItem("customTime"); // 🚨 Clear custom time
   localStorage.setItem("presetLabel", label);
   localStorage.setItem("presetMinutes", minutes);
   localStorage.setItem("timerType", label.toLowerCase());
   window.location.href = "preset.html";
 }
+
 
 // 🌟 From preset.html
 function startPresetTimer() {
