@@ -1,4 +1,7 @@
-/* Global base */
+/* Load retro font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Base setup */
 body {
   margin: 0;
   padding: 0;
@@ -18,40 +21,41 @@ body {
   background: url('assets/as.jpg') no-repeat center center;
   background-size: cover;
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   position: relative;
 }
 
-/* Top header bar like retro window */
+/* Window header */
 .window-header {
-  height: 40px;
-  background-color: #dca;
   display: flex;
-  align-items: right;
+  align-items: center;
   justify-content: space-between;
-  padding: 0 10px;
-  font-family: monospace;
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
-  border-bottom: 2px solid #a88;
+  height: 72px; /* Taller header */
+  padding: 0 16px;
+  background: #d8b185;
+  border-bottom: 3px solid #000;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  color: #000;
+  box-sizing: border-box;
 }
 
-/* Header title */
-.window-header .title {
-  flex: 1;
-  text-align: left;
+.window-title {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
-/* Fake window buttons */
+/* Window control dots */
 .window-controls {
   display: flex;
   gap: 6px;
 }
-.window-controls div {
+
+.window-controls .win-btn {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -62,54 +66,60 @@ body {
 /* Back button */
 .back-button {
   position: absolute;
-  top: 50px;
+  top: 60px;
   left: 16px;
-  background-color: #ffe4b5;
+  background-color: #d2691e; /* Chocolate */
+  color: #fff;
   border: none;
   padding: 6px 12px;
-  font-weight: bold;
-  font-size: 14px;
-  border-radius: 8px;
+  font-size: 12px;
+  border-radius: 6px;
   cursor: pointer;
-  box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
   z-index: 10;
 }
 
-/* Centered content */
-.main-content {
+/* Welcome message */
+.welcome-text {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  color: #000;
+  text-align: center;
+  padding: 40px 16px 0;
+  line-height: 1.8;
+}
+
+/* Main content container */
+.window-body {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 60px 16px 16px;
+  justify-content: center;
+  padding: 16px;
+  position: relative;
   text-align: center;
 }
 
-/* Countdown */
-#countdown {
-  font-size: 48px;
-  font-weight: bold;
-  margin: 24px 0;
-}
-
-/* Buttons */
-button {
+/* Chocolate-styled button */
+.choco-button {
   padding: 10px 20px;
-  background-color: #ff6b6b;
+  background-color: #d2691e;
   color: white;
   border: none;
-  border-radius: 6px;
-  font-size: 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Verdana', sans-serif;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #ff4b4b;
+.choco-button:hover {
+  background-color: #a0522d;
 }
 
-/* Options grid */
+/* Grid layout for menu options */
 .options-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -119,12 +129,12 @@ button:hover {
 
 .option {
   background-color: #fff;
-  border-radius: 16px;
+  border-radius: 12px;
   padding: 12px;
   text-align: center;
   cursor: pointer;
   transition: transform 0.2s ease;
-  box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
   width: 100px;
 }
 
@@ -138,7 +148,7 @@ button:hover {
   margin-bottom: 6px;
 }
 
-/* Input fields for custom time */
+/* Input for custom time */
 input[type="number"] {
   width: 80px;
   padding: 8px;
@@ -146,6 +156,13 @@ input[type="number"] {
   border-radius: 8px;
   border: 1px solid #ccc;
   text-align: center;
+}
+
+/* Timer display */
+#countdown {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 24px 0;
 }
 
 /* Timer buttons */
