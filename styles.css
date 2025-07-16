@@ -32,7 +32,7 @@ body {
   background-color: #d2a679;
   padding: 8px 12px;
   font-size: 14px;
-  text-align: right;
+  text-align: left;
   font-weight: bold;
   border-bottom: 2px solid #a57b5b;
 }
@@ -59,14 +59,17 @@ body {
 
 /* Back button */
 .back-btn {
-  display: block;
-  margin: 12px auto 8px auto;
-  padding: 6px 16px;
-  background: #f9e5c8;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 48px;
+  left: 20px;
+  background-color: #f9e7ce;
+  font-family: 'Press Start 2P', monospace;
   font-size: 12px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  z-index: 10;
   cursor: pointer;
 }
 
@@ -162,19 +165,58 @@ input[type="number"] {
 }
 
 /* Timer display */
-#countdown {
-  font-size: 48px;
-  font-weight: bold;
-  margin: 24px 0;
-}
-
-/* Timer buttons */
-.timer-buttons {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
+.timer-display {
+  text-align: center;
   margin-top: 20px;
 }
+
+#countdown {
+  background-color: #f9e7ce;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 24px;
+  padding: 12px 24px;
+  border-radius: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: inline-block;
+}
+
+.timer-image {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 20px;
+}
+
+.timer-image img {
+  width: 96px;
+  height: 96px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  padding: 0 24px;
+}
+
+.controls button {
+  background-color: #f9e7ce;
+  color: #000;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.controls button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
 
 /* Utility */
 .hidden {
